@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: './server.js',
-  target: 'node', // Node.js 환경에서 실행되므로 target 설정
+  target: 'node',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js', // 번들된 파일명

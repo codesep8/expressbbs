@@ -1,6 +1,6 @@
 $(document).ready(function() {
     const preferredTheme = localStorage.getItem('theme');
-
+    
     if (preferredTheme) {
         $('html').attr('class', preferredTheme);
     } else {
@@ -10,6 +10,7 @@ $(document).ready(function() {
             $('html').attr('class', 'light');
         }
     }
+    $('#display-config-theme\\.background').val(preferredTheme)
 });
 
   $(document).ready(function () {

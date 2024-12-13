@@ -1,39 +1,20 @@
-$(document).ready(function() {
-    const preferredTheme = localStorage.getItem('theme');
+$(document).ready(function () {
+    // 초기 테마 설정
+    const preferredTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     
-    if (preferredTheme) {
-        $('html').attr('class', preferredTheme);
-    } else {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            $('html').attr('class', 'dark');
-        } else {
-            $('html').attr('class', 'light');
-        }
-    }
-    $('#display-config-theme\\.background').val(preferredTheme)
-});
+    $('html').attr('class', preferredTheme);
+    $('#display-config-theme\\.background').val(preferredTheme);
 
-  $(document).ready(function () {
-    // Select 요소의 변경 이벤트를 감지
+    // 테마 변경 감지 및 업데이트
     $('#display-config-theme\\.background').on('change', function () {
-      const selectedValue = $(this).val(); // 선택된 옵션 값
-      
-      // body에 클래스를 추가/제거하여 모드 전환
-      if (selectedValue === 'dark') {
-        $('html').removeClass('light').addClass('dark');
-        localStorage.setItem('theme', 'dark');
-      } else if (selectedValue === 'light') {
-        $('html').removeClass('dark').addClass('light');
-        localStorage.setItem('theme', 'light');
-      } else {
-        $('html').removeClass('dark light');
-      }
+        const selectedValue = $(this).val(); // 선택된 옵션 값
+
+        if (selectedValue === 'dark' || selectedValue === 'light') {
+            $('html').attr('class', selectedValue);
+            localStorage.setItem('theme', selectedValue);
+        } else {
+            $('html').attr('class', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+            localStorage.removeItem('theme');
+        }
     });
 });
-
-function toggleTheme() {
-    const currentTheme = $('html').attr('class');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    $('html').attr('class', newTheme);
-    localStorage.setItem('theme', newTheme); // 변경된 테마를 로컬 스토리지에 저장
-}

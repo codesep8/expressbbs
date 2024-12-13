@@ -5,7 +5,7 @@ module.exports = {
   target: 'node',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js', // 번들된 파일명
+    filename: 'server.bundle.js', // 번들된 파일명
   },
   module: {
     rules: [

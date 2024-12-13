@@ -22,10 +22,10 @@ $(document).ready(function() {
         $('html').removeClass('light').addClass('dark');
         localStorage.setItem('theme', 'dark');
       } else if (selectedValue === 'light') {
-        $('body').removeClass('dark').addClass('light');
+        $('html').removeClass('dark').addClass('light');
         localStorage.setItem('theme', 'light');
       } else {
-        $('body').removeClass('dark light');
+        $('html').removeClass('dark light');
       }
     });
 });

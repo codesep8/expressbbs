@@ -7,26 +7,14 @@
          </div>
          <nav class="navbar navbar-expand navbar-arca-settings p-0 pl-2">
             <ul class="navbar-nav mr-auto">
-               <li class="nav-item active"><a data-toggle="collapse" data-target=".navbar-item-general" aria-expanded="false" aria-controls="displayconfig-navbar" class="btn">General</a></li>
-               <li class="nav-item"><a data-toggle="collapse" data-target=".navbar-item-content" aria-expanded="false" aria-controls="displayconfig-navbar" class="btn">Content</a></li>
+               <li class="nav-item active"><a data-toggle="collapse" data-target=".navbar-item-general" aria-expanded="false" aria-controls="displayconfig-navbar" class="btn">일반</a></li>
+               <li class="nav-item"><a data-toggle="collapse" data-target=".navbar-item-content" aria-expanded="false" aria-controls="displayconfig-navbar" class="btn">콘텐츠</a></li>
             </ul>
          </nav>
          <form class="modal-body">
             <div class="form-row navbar-item-general collapse show" data-parent=".modal-display-config">
-               <div class="form-group col-md-12">
-                  <label for="display-config-i18n.language">Language <span style="color: #dc3545; color: var(--danger);"><sup><i>α+</i></sup></span></label>
-                  <select name="i18n.language" id="display-config-i18n.language" class="form-control">
-                     <option value="">(Automatic recognition)</option>
-                     <option value="ko">Korean/ of Joseon</option>
-                     <option value="en">English</option>
-                     <option value="ja">Japanese</option>
-                     <option value="es">Spanish</option>
-                  </select>
-               </div>
-            </div>
-            <div class="form-row navbar-item-general collapse show" data-parent=".modal-display-config">
                <div class="form-group col-md-6">
-                  <label for="display-config-font.family">Font</label>
+                  <label for="display-config-font.family">폰트</label>
                   <select name="font.family" id="display-config-font.family" class="form-control">
                      <option value="">Automatic</option>
                      <option value="ff-sansserif">Browser default</option>
@@ -37,52 +25,22 @@
                      <option value="ff-pretendard">Pretendard</option>
                   </select>
                </div>
-               <div class="form-group col-md-6">
-                  <label for="display-config-font.size">Font size</label>
-                  <select name="font.size" id="display-config-font.size" class="form-control">
-                     <option value="">Browser default</option>
-                     <option value="18px">Largest</option>
-                     <option value="16px">Large</option>
-                     <option value="15px">Normal</option>
-                     <option value="14px">Small</option>
-                     <option value="13px">Smallest</option>
-                  </select>
-               </div>
-            </div>
             <div class="form-row navbar-item-general collapse show" data-parent=".modal-display-config">
                <div class="form-group col-md-6">
-                  <label for="display-config-theme.background">Background</label>
+                  <label for="display-config-theme.background">테마</label>
                   <select name="theme.background" id="display-config-theme.background" class="form-control">
-                     <option value="">Browser default</option>
-                     <option value="light">Bright</option>
-                     <option value="dark">Dark</option>
-                  </select>
-               </div>
-               <div class="form-group col-md-6">
-                  <label for="display-config-theme.dark">Dark background color</label>
-                  <select name="theme.dark" id="display-config-theme.dark" class="form-control">
-                     <option value="">Dark</option>
-                     <option value="black">Full dark</option>
+                     <option value="">브라우저에 맞게</option>
+                     <option value="light">밝게</option>
+                     <option value="dark">어둡게</option>
                   </select>
                </div>
             </div>
             <div class="form-row navbar-item-general collapse show" data-parent=".modal-display-config">
                <div class="form-group col-md-6">
-                  <label for="display-config-theme.width">Page width</label>
-                  <select name="theme.width" id="display-config-theme.width" class="form-control">
-                     <option value="">Not fixed</option>
-                     <option value="1100">1100px</option>
-                     <option value="1200">1200px</option>
-                     <option value="1300">1300px</option>
-                     <option value="1500">1500px</option>
-                     <option value="1600">1600px</option>
-                  </select>
-               </div>
-               <div class="form-group col-md-6">
-                  <label for="display-config-theme.navbar">Top bar position</label>
+                  <label for="display-config-theme.navbar">상단 바 옵션</label>
                   <select name="theme.navbar" id="display-config-theme.navbar" class="form-control">
-                     <option value="scroll">Scroll</option>
-                     <option value="fixed">Fix/Setting</option>
+                     <option value="scroll">비고정</option>
+                     <option value="fixed">고정</option>
                   </select>
                </div>
             </div>

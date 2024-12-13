@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './server.js', // Express 진입점
+  entry: './server.js',
   target: 'node', // Node.js 환경에서 실행되므로 target 설정
   output: {
     path: path.resolve(__dirname, 'dist'),

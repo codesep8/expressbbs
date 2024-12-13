@@ -1,0 +1,24 @@
+{
+    "name": "open-live",
+    "scripts": {
+        "dev": "nodemon server.js",
+        "start": "node dist/server.bundle.js",
+        "build": "webpack --mode production"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "compression": "^1.7.5",
+        "express": "^4.21.2",
+        "express-session": "^1.18.1",
+        "morgan": "^1.10.0",
+        "nodemon": "^3.1.7",
+        "nunjucks": "^3.2.4"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.26.0",
+        "@babel/preset-env": "^7.26.0",
+        "babel-loader": "^9.2.1",
+        "webpack": "^5.97.1",
+        "webpack-cli": "^5.1.4"
+    }
+}

@@ -1,0 +1,8 @@
+{% extends './layout.html' %}
+
+{% block content %}
+<form method="POST" action="/u/logout">
+    <h1>정말 로그아웃 하시겠습니까?</h1>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

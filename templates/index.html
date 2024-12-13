@@ -1,0 +1,9 @@
+{% extends './layout.html' %}
+
+{% block content %}
+    {% if session.username %}
+        <p>Hi, {{ session.username }}</p>
+    {% else %}
+        <p>Hi, guest</p>
+    {% endif %}
+{% endblock %}

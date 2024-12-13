@@ -1,0 +1,23 @@
+<nav class="navbar navbar-dark navbar-expand nav">
+    <a class="navbar-brand" href="/">Home</a>
+    <ul class="navbar-nav">
+        <li class="nav-item"><a href="/" class="text-white">구독</a></li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        {% if session.username %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="text-white">{{ session.username }}</span>
+                    <i class="bi bi-person-fill" style="font-size: 1.5rem; color: white;"></i>                           
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="/u/logout">로그아웃</a>
+                </div>
+            </li>
+        {% else %}
+            <li class="nav-item">
+                <a href="/u/login?redi={{ currentUrl | urlencode }}" class="text-white">로그인</a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>
